@@ -28,6 +28,44 @@ hr{
     margin-bottom: 27px;
 }
 
+/* header and navigation styles */
+.header{
+    background-color: #562EFF;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav .logo-and-title{
+    display: flex;
+}
+
+nav .logo-and-title img{
+    width: 50px;
+    height: 60px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.nav-title{
+    color: #FFF;
+    font-size: 24px;
+    margin-left: 15px;
+}
+
+nav ul {
+    display: flex; /* to set the child elements beside each other */
+    align-items: center; /* for vertical alignment */
+}
+
+nav li {
+    list-style: none;
+    margin-left: 50px;
+    color: #FFF;
+    font-size: 16px;
+}
+
 /* top players style */
 .top-players{
     margin-bottom: 30px;
@@ -150,13 +188,16 @@ hr{
     For Mobile Devices
    ------------------- */
 @media only screen and (max-width: 688px) {
+    nav ul li{
+        margin-top: 10px;
+    }
     .container{
         width: 100%;
     }
     .players, .blogs, .courses{
         grid-template-columns: repeat(1, 1fr);
     }
-    .player, .blog, .course{
+    nav, nav ul, .player, .blog, .course{
         flex-direction: column;
         align-items: center;
     }
